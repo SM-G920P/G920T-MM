@@ -52,6 +52,7 @@ else
         echo "You need to define your device target!"
         echo "example: build_kernel.sh G920X"
         echo "example: build_kernel.sh G925X"
+        echo "example: build_kernel.sh G920P"
         exit 1
 fi
 
@@ -75,6 +76,11 @@ fi;
 # SM-G925X
 if [ "$TARGET" = "G925X" ] ; then
 	export KERNEL_CONFIG="exynos7420-zeroflte_tmo_defconfig";
+fi;
+
+# SM-G920P
+if [ "$TARGET" = "G920P" ] ; then
+	export KERNEL_CONFIG="exynos7420-zerofltespr_defconfig";
 fi;
 
 # build script
